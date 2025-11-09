@@ -1,5 +1,5 @@
 import info.towdak.convention.DevConfig
-import info.towdak.convention.TwodotFlavor
+import info.towdak.convention.TwoDotsFlavor
 import info.towdak.convention.ProductConfig
 import info.towdak.convention.configureFlavorSettings
 
@@ -19,20 +19,20 @@ android {
 
     configureFlavorSettings(this) { flavor ->
         when (flavor) {
-            TwodotFlavor.dev -> {
-                buildConfigField(
+            TwoDotsFlavor.dev -> {
+               /* buildConfigField(
                     "String",
                     "GOOGLE_WEB_CLIENT_ID",
                     "\"${DevConfig.GOOGLE_WEB_CLIENT_ID}\""
-                )
+                )*/
             }
 
-            TwodotFlavor.product -> {
-                buildConfigField(
+            TwoDotsFlavor.product -> {
+                /*buildConfigField(
                     "String",
                     "GOOGLE_WEB_CLIENT_ID",
                     "\"${ProductConfig.GOOGLE_WEB_CLIENT_ID}\""
-                )
+                )*/
             }
         }
     }

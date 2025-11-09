@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "info..towdak.core.presentation"
+    namespace = "info.towdak.core.presentation"
 }
 
 dependencies {

@@ -1,7 +1,7 @@
 import info.towdak.convention.DevConfig
 import info.towdak.convention.ProductConfig
 import info.towdak.convention.configureFlavorSettings
-import info.towdak.convention.TwodotFlavor
+import info.towdak.convention.TwoDotsFlavor
 
 plugins {
     alias(libs.plugins.twodot.android.library)
@@ -36,20 +36,20 @@ android {
 
     configureFlavorSettings(this) { flavor ->
         when (flavor) {
-            TwodotFlavor.dev -> {
-                buildConfigField(
+            TwoDotsFlavor.dev -> {
+                /*buildConfigField(
                     "String",
                     "API_SERVER",
                     "\"${DevConfig.API_SERVER}\""
-                )
+                )*/
             }
 
-            TwodotFlavor.product -> {
-                buildConfigField(
+            TwoDotsFlavor.product -> {
+               /* buildConfigField(
                     "String",
                     "API_SERVER",
                     "\"${ProductConfig.API_SERVER}\""
-                )
+                )*/
             }
         }
     }

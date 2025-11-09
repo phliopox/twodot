@@ -8,8 +8,8 @@ plugins {
     alias(libs.plugins.twodot.android.application.flavors)
     alias(libs.plugins.twodot.hilt)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.twodot.android.firebase)
-    alias(libs.plugins.google.services)
+    //alias(libs.plugins.twodot.android.firebase) 추후 파베 확정시 추가
+    //alias(libs.plugins.google.services)
 }
 
 android {
