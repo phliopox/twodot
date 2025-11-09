@@ -1,7 +1,7 @@
 import info.towdak.convention.DevConfig
 import info.towdak.convention.ProductConfig
 import info.towdak.convention.configureFlavorSettings
-import info.towdak.convention.ImdangFlavor
+import info.towdak.convention.TwodotFlavor
 
 plugins {
     alias(libs.plugins.twodot.android.library)
@@ -36,7 +36,7 @@ android {
 
     configureFlavorSettings(this) { flavor ->
         when (flavor) {
-            ImdangFlavor.dev -> {
+            TwodotFlavor.dev -> {
                 buildConfigField(
                     "String",
                     "API_SERVER",
@@ -44,7 +44,7 @@ android {
                 )
             }
 
-            ImdangFlavor.product -> {
+            TwodotFlavor.product -> {
                 buildConfigField(
                     "String",
                     "API_SERVER",

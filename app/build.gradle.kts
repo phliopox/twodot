@@ -1,9 +1,5 @@
 import info.towdak.convention.ApplicationId
-import info.towdak.convention.DevConfig
-import info.towdak.convention.ImdangFlavor
-import info.towdak.convention.ProductConfig
 import info.towdak.convention.Release
-import info.towdak.convention.configureFlavorSettings
 
 
 plugins {

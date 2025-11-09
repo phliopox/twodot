@@ -11,14 +11,14 @@ enum class FlavorDimension {
 }
 
 @Suppress("EnumEntryName")
-enum class ImdangFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
+enum class TwodotFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
     dev(FlavorDimension.server, applicationIdSuffix = ".dev"),
     product(FlavorDimension.server),
 }
 
 fun configureFlavors(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
-    flavorConfigurationBlock: ProductFlavor.(flavor: ImdangFlavor) -> Unit = {},
+    flavorConfigurationBlock: ProductFlavor.(flavor: TwodotFlavor) -> Unit = {},
 ) {
     commonExtension.apply {
         FlavorDimension.values().forEach { flavorDimension ->
@@ -26,7 +26,7 @@ fun configureFlavors(
         }
 
         productFlavors {
-            ImdangFlavor.values().forEach { imdangFlavor ->
+            TwodotFlavor.values().forEach { imdangFlavor ->
                 register(imdangFlavor.name) {
                     dimension = imdangFlavor.dimension.name
                     flavorConfigurationBlock(this, imdangFlavor)
@@ -44,10 +44,10 @@ fun configureFlavors(
 // 각 모듈의 build.gradle.kts 파일에서 필요한 configuration을 적용할 수 있도록
 fun configureFlavorSettings(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
-    flavorConfigBlock: ProductFlavor.(flavor: ImdangFlavor) -> Unit
+    flavorConfigBlock: ProductFlavor.(flavor: TwodotFlavor) -> Unit
 ) {
     commonExtension.productFlavors {
-        ImdangFlavor.values().forEach { imdangFlavor ->
+        TwodotFlavor.values().forEach { imdangFlavor ->
             named(imdangFlavor.name) {
                 flavorConfigBlock(this, imdangFlavor)
             }

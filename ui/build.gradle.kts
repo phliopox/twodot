@@ -1,5 +1,5 @@
 import info.towdak.convention.DevConfig
-import info.towdak.convention.ImdangFlavor
+import info.towdak.convention.TwodotFlavor
 import info.towdak.convention.ProductConfig
 import info.towdak.convention.configureFlavorSettings
 
@@ -19,7 +19,7 @@ android {
 
     configureFlavorSettings(this) { flavor ->
         when (flavor) {
-            ImdangFlavor.dev -> {
+            TwodotFlavor.dev -> {
                 buildConfigField(
                     "String",
                     "GOOGLE_WEB_CLIENT_ID",
@@ -27,7 +27,7 @@ android {
                 )
             }
 
-            ImdangFlavor.product -> {
+            TwodotFlavor.product -> {
                 buildConfigField(
                     "String",
                     "GOOGLE_WEB_CLIENT_ID",
